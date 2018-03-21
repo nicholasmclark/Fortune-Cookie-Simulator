@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="LaoSangamMN.ttf">
+            <string>LaoSangamMN</string>
+        </array>
+        <array key="Moyko.ttf">
+            <string>Moyko</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Fortune_Cookie_Simulator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WKJ-pf-FCG" userLabel="Button Container">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="463"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FORTUNE COOKIE SIMULATOR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IWI-1Q-4qw">
+                                        <rect key="frame" x="35" y="85" width="305" height="26"/>
+                                        <fontDescription key="fontDescription" name="Moyko" family="Moyko" pointSize="26"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pdc-8T-vbp">
+                                        <rect key="frame" x="94" y="138" width="187" height="187"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Pdc-8T-vbp" secondAttribute="height" multiplier="1:1" id="bn2-s2-3pT"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="cookie"/>
+                                        <connections>
+                                            <action selector="cookieButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nhT-2B-a8Q"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Pdc-8T-vbp" firstAttribute="centerX" secondItem="WKJ-pf-FCG" secondAttribute="centerX" id="1OT-HL-AUe"/>
+                                    <constraint firstItem="IWI-1Q-4qw" firstAttribute="centerX" secondItem="Pdc-8T-vbp" secondAttribute="centerX" id="4SH-WB-mMY"/>
+                                    <constraint firstItem="Pdc-8T-vbp" firstAttribute="width" secondItem="WKJ-pf-FCG" secondAttribute="width" multiplier="0.5" id="5ux-jI-dQK"/>
+                                    <constraint firstItem="Pdc-8T-vbp" firstAttribute="top" secondItem="IWI-1Q-4qw" secondAttribute="bottom" constant="27" id="700-4T-10e"/>
+                                    <constraint firstItem="Pdc-8T-vbp" firstAttribute="centerY" secondItem="WKJ-pf-FCG" secondAttribute="centerY" id="Eaz-2O-XuJ"/>
+                                    <constraint firstItem="IWI-1Q-4qw" firstAttribute="top" secondItem="WKJ-pf-FCG" secondAttribute="top" constant="85" id="gy5-7Y-Rd6"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7gh-NS-E0e" userLabel="Fortune Container">
+                                <rect key="frame" x="0.0" y="463" width="375" height="204"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Press Cookie To Get Your Fortune" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z1U-WC-ohr">
+                                        <rect key="frame" x="21" y="13" width="332" height="178"/>
+                                        <fontDescription key="fontDescription" name="LaoSangamMN" family="Lao Sangam MN" pointSize="19"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Z1U-WC-ohr" secondAttribute="bottom" constant="13" id="8lb-0H-JH6"/>
+                                    <constraint firstItem="Z1U-WC-ohr" firstAttribute="top" secondItem="7gh-NS-E0e" secondAttribute="top" constant="13" id="JsW-Nv-ont"/>
+                                    <constraint firstAttribute="trailing" secondItem="Z1U-WC-ohr" secondAttribute="trailing" constant="22" id="Ycn-yc-Kgp"/>
+                                    <constraint firstItem="Z1U-WC-ohr" firstAttribute="leading" secondItem="7gh-NS-E0e" secondAttribute="leading" constant="21" id="nYU-f3-ksH"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.72549019607843135" blue="0.0078431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="7gh-NS-E0e" firstAttribute="top" secondItem="WKJ-pf-FCG" secondAttribute="bottom" id="Aam-GL-jTJ"/>
+                            <constraint firstItem="7gh-NS-E0e" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Guh-K8-yJX"/>
+                            <constraint firstItem="WKJ-pf-FCG" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Hma-5D-ZBL"/>
+                            <constraint firstItem="WKJ-pf-FCG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="R62-lM-e4Z"/>
+                            <constraint firstAttribute="bottom" secondItem="WKJ-pf-FCG" secondAttribute="bottom" constant="204" id="RhG-PB-jPa"/>
+                            <constraint firstItem="WKJ-pf-FCG" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="WLR-SJ-mP7"/>
+                            <constraint firstItem="7gh-NS-E0e" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Y7O-7K-U3y"/>
+                            <constraint firstItem="7gh-NS-E0e" firstAttribute="top" secondItem="WKJ-pf-FCG" secondAttribute="bottom" id="xyc-30-OZb"/>
+                            <constraint firstItem="7gh-NS-E0e" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="y9p-Nc-hTn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="fortuneLabel" destination="Z1U-WC-ohr" id="FvU-dg-Dll"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="33.733133433283363"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cookie" width="600" height="600"/>
+    </resources>
+</document>
